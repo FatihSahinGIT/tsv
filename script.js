@@ -143,14 +143,7 @@ function renderNextMatch() {
   target.innerHTML = `
     <article class="match-facts" aria-label="${escapeHtml(match.homeTeam.name)} gegen ${escapeHtml(match.awayTeam.name)}">
       <div class="match-fact">
-        <p class="match-label">Wettbewerb</p>
-        <div class="match-value">
-          <p>${escapeHtml(match.competition)}</p>
-          <p class="match-secondary">${escapeHtml(match.type)}</p>
-        </div>
-      </div>
-      <div class="match-fact">
-        <p class="match-label">Termin</p>
+        <p class="match-label">Uhrzeit</p>
         <div class="match-value">
           <p><time datetime="${escapeHtml(match.date)}">${escapeHtml(match.dateLabel)}</time></p>
           <p><time datetime="${escapeHtml(match.date)}T${escapeHtml(match.time)}">${escapeHtml(match.time)} Uhr</time></p>
@@ -170,8 +163,8 @@ function renderNextMatch() {
           <p>${escapeHtml(match.venue.name)}</p>
           <address>${escapeHtml(match.venue.street)}<br>${escapeHtml(match.venue.city)}</address>
           <div class="match-links">
-            <a href="${escapeHtml(match.venue.mapUrl)}" target="_blank" rel="noopener noreferrer">Route öffnen <span aria-hidden="true">↗</span><span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
-            <a href="${escapeHtml(match.detailsUrl)}" target="_blank" rel="noopener noreferrer">Spieldetails <span aria-hidden="true">↗</span><span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+            <a href="${escapeHtml(match.venue.mapUrl)}" target="_blank" rel="noopener noreferrer">Route öffnen<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+            <a href="${escapeHtml(match.detailsUrl)}" target="_blank" rel="noopener noreferrer">Spieldetails<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
           </div>
         </div>
       </div>

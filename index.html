@@ -1,204 +1,366 @@
 <!doctype html>
 <html lang="de" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Die Herrenmannschaft des TSV Wittenau: Spiele, Ergebnisse, Mannschaft und Sponsoring.">
-  <title>TSV Wittenau Herren | Fußball in Berlin</title>
-  <link rel="stylesheet" href="assets/vendor/lenis.css">
-  <link rel="stylesheet" href="styles.css">
-  <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/vendor/gsap.min.js" defer></script>
-  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#hauptinhalt">Direkt zum Inhalt</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Die Herrenmannschaft des TSV Wittenau: Spiele, Ergebnisse, Mannschaft und Sponsoring."
+    />
+    <title>TSV Wittenau Herren</title>
+    <link rel="stylesheet" href="assets/vendor/lenis.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/vendor/lenis.min.js" defer></script>
+    <script src="assets/vendor/gsap.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#hauptinhalt">Direkt zum Inhalt</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#start" aria-label="TSV Wittenau – zur Startseite">
-        <span class="brand-mark" aria-hidden="true">
-          <img src="assets/tsv-wittenau-logo.png" alt="" width="2480" height="2480">
-        </span>
-        <span>TSV Wittenau</span>
-      </a>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptnavigation">
-        <span class="nav-toggle-label">Menü</span>
-        <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span></span>
-      </button>
-
-      <nav id="hauptnavigation" class="site-nav" aria-label="Hauptnavigation">
-        <ul>
-          <li><a href="#highlights">Highlights</a></li>
-          <li><a href="#ergebnisse">Ergebnisse</a></li>
-          <li><a href="#mannschaft">Mannschaft</a></li>
-          <li><a href="#sponsoren">Sponsoren</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="hauptinhalt">
-    <section id="start" class="hero" aria-labelledby="hero-title">
-      <div class="hero-content container">
-        <p class="eyebrow">TSV Wittenau Herren</p>
-        <h1 id="hero-title">Aus 7 wurden 11.</h1>
-        <p class="hero-intro">Aus einer 7er-Mannschaft wurde ein neues Kapitel auf dem Großfeld. Gemeinsam für Wittenau.</p>
-        <a class="button button-dark" href="#naechstes-spiel">Zum nächsten Spiel</a>
-      </div>
-      <div class="hero-image container" role="img" aria-label="Platzhalter: Herrenmannschaft des TSV Wittenau auf dem Fußballplatz">
-        <p class="hero-image-caption">Saison 2026/27 · Berlin-Reinickendorf</p>
-      </div>
-    </section>
-
-    <section id="naechstes-spiel" class="section section-dark" aria-labelledby="next-match-title">
-      <div class="container next-match-layout">
-        <div class="section-heading section-heading-light">
-          <p class="eyebrow light">Anpfiff in Wittenau</p>
-          <h2 id="next-match-title">Nächstes Spiel</h2>
-          <p class="next-match-intro">Alle wichtigen Informationen zum kommenden Spiel auf einen Blick.</p>
-          <a class="button button-dark" href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69" target="_blank" rel="noopener noreferrer">Spielplan öffnen <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <div id="next-match-content" class="match-content" aria-live="polite">
-          <p class="fallback-notice">Die aktuellen Spieldaten werden geladen. Bei deaktiviertem JavaScript finden Sie den Spielplan direkt auf <a href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69" target="_blank" rel="noopener noreferrer">FUSSBALL.DE</a>.</p>
-        </div>
-
-        <!-- FUSSBALL.DE-WIDGET: Offiziellen Einbettungscode später hier einfügen. -->
-        <div id="fussball-de-widget" class="widget-placeholder" hidden aria-label="Platzhalter für das offizielle FUSSBALL.DE-Widget"></div>
-      </div>
-    </section>
-
-    <section id="ergebnisse" class="section" aria-labelledby="results-title">
-      <div class="container">
-        <div class="section-heading split-heading">
-          <div>
-            <p class="eyebrow">Rückblick</p>
-            <h2 id="results-title">Letzte Spiele</h2>
-          </div>
-          <a class="text-link" href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69" target="_blank" rel="noopener noreferrer">Vollständiger Spielplan auf FUSSBALL.DE<span aria-hidden="true"> ↗</span></a>
-        </div>
-
-        <div id="recent-matches" class="results-list">
-          <p class="fallback-notice">Ergebnisse werden mit JavaScript angezeigt. Den vollständigen Spielplan finden Sie auf <a href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69" target="_blank" rel="noopener noreferrer">FUSSBALL.DE</a>.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="highlights" class="highlights-section" aria-labelledby="highlights-title">
-      <div class="highlights-intro">
-        <div class="container highlights-intro-grid">
-          <div>
-            <p class="eyebrow">TSV Wittenau Herren</p>
-            <h2 id="highlights-title">Highlight aus dem letzten Spiel.</h2>
-          </div>
-          <div class="highlights-intro-copy">
-            <p>Die neuesten Bilder vom Platz – direkt vom offiziellen YouTube-Kanal des TSV Wittenau.</p>
-            <a class="text-link" href="https://www.youtube.com/@TSVWittenaufussball" target="_blank" rel="noopener noreferrer">YouTube-Kanal öffnen <span aria-hidden="true">↗</span><span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="highlight-feature" aria-labelledby="video-title">
-        <div class="container">
-          <div class="highlight-video">
-            <iframe
-              data-youtube-video="fsUrPh3jStQ"
-              title="Internationale gegen TSV Wittenau auf YouTube"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              loading="lazy"></iframe>
-          </div>
-
-          <div class="highlight-details">
-            <div>
-              <p class="eyebrow">Aktuellstes Video</p>
-              <h3 id="video-title">Internationale vs. TSV Wittenau</h3>
-            </div>
-            <a class="button button-dark" href="https://www.youtube.com/watch?v=fsUrPh3jStQ" target="_blank" rel="noopener noreferrer">Auf YouTube ansehen <span aria-hidden="true">↗</span><span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="geschichte" class="story-section" aria-labelledby="story-title">
-      <div class="story-image" role="img" aria-label="Platzhalter: Die Herrenmannschaft des TSV Wittenau auf dem Fußballplatz"></div>
-      <div class="story-copy">
-        <p class="eyebrow">Unser Weg</p>
-        <h2 id="story-title">Kleines Feld.<br>Große Pläne.</h2>
-        <p>Was als 7er-Herrenmannschaft begann, wächst weiter. Seit der Saison 2026/27 tritt der TSV Berlin-Wittenau als 11er-Mannschaft an. Der nächste Schritt einer Mannschaft, die gemeinsam mehr erreichen will.</p>
-      </div>
-    </section>
-
-    <section id="mannschaft" class="section team-section" aria-labelledby="team-title">
-      <div class="container">
-        <div class="section-heading split-heading">
-          <div>
-            <p class="eyebrow">Saison 2026/27</p>
-            <h2 id="team-title">Unsere Mannschaft</h2>
-          </div>
-          <p class="section-note">Ein Team. Ein Kiez. Ein Ziel.</p>
-        </div>
-
-        <div id="players-grid" class="players-grid">
-          <p class="fallback-notice">Der Mannschaftskader wird mit JavaScript angezeigt. Die Kaderdaten sind derzeit als Beispielinhalte angelegt.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="sponsoren" class="section sponsor-section" aria-labelledby="sponsor-title">
-      <div class="container sponsor-layout">
-        <div class="sponsor-copy">
-          <p class="eyebrow light">Partnerschaft</p>
-          <h2 id="sponsor-title">Gemeinsam für Wittenau.</h2>
-          <p>Unterstützen Sie unsere Mannschaft und werden Sie Teil unseres nächsten Kapitels.</p>
-          <div class="button-group">
-            <a class="button button-light" href="mailto:sponsoring@tsv-wittenau.de?subject=Sponsoring%20Herrenmannschaft">Sponsor werden</a>
-            <a class="button button-outline-light" href="#kontakt">Kontakt aufnehmen</a>
-          </div>
-        </div>
-        <ul class="benefits-list">
-          <li><span aria-hidden="true">01</span>Sichtbarkeit im lokalen Umfeld</li>
-          <li><span aria-hidden="true">02</span>Präsenz bei Heimspielen und digitalen Kanälen</li>
-          <li><span aria-hidden="true">03</span>Unterstützung des Amateurfußballs in Berlin</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer id="kontakt" class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="#start" aria-label="TSV Wittenau – nach oben">
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="#start"
+          aria-label="TSV Wittenau – zur Startseite"
+        >
           <span class="brand-mark" aria-hidden="true">
-            <img src="assets/tsv-wittenau-logo.png" alt="" width="2480" height="2480">
+            <img
+              src="assets/tsv-wittenau-logo.png"
+              alt=""
+              width="2480"
+              height="2480"
+            />
           </span>
-          <span>TSV Wittenau</span>
         </a>
-        <p>Herrenfußball aus Berlin-Reinickendorf.</p>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="hauptnavigation"
+        >
+          <span class="nav-toggle-label">Menü</span>
+          <span class="nav-toggle-icon" aria-hidden="true"
+            ><span></span><span></span
+          ></span>
+        </button>
+
+        <nav id="hauptnavigation" class="site-nav" aria-label="Hauptnavigation">
+          <ul>
+            <li><a href="#ergebnisse">Ergebnisse</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#mannschaft">Mannschaft</a></li>
+            <li><a href="#sponsoren">Sponsoren</a></li>
+          </ul>
+        </nav>
       </div>
-      <div>
-        <h2 class="footer-heading">Spielstätte</h2>
-        <address>Scharnweberstraße KR1<br>Uranusweg 34<br>13405 Berlin</address>
+    </header>
+
+    <main id="hauptinhalt">
+      <section id="start" class="hero" aria-labelledby="hero-title">
+        <div class="hero-content container">
+          <h1 id="hero-title">Gemeinsam für Wittenau</h1>
+          <a class="button button-dark" href="#naechstes-spiel"
+            >Zum nächsten Spiel</a
+          >
+        </div>
+        <div
+          class="hero-image container"
+          role="img"
+          aria-label="Platzhalter: Herrenmannschaft des TSV Wittenau auf dem Fußballplatz"
+        >
+          <p class="hero-image-caption">
+            Saison 2026/27 · Berlin-Reinickendorf
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="naechstes-spiel"
+        class="section section-dark"
+        aria-labelledby="next-match-title"
+      >
+        <div class="container next-match-layout">
+          <div class="section-heading section-heading-light">
+            <h2 id="next-match-title">Nächstes Spiel</h2>
+            <a
+              class="button button-dark"
+              href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Spielplan öffnen</a
+            >
+          </div>
+
+          <div id="next-match-content" class="match-content" aria-live="polite">
+            <p class="fallback-notice">
+              Die aktuellen Spieldaten werden geladen. Bei deaktiviertem
+              JavaScript finden Sie den Spielplan direkt auf
+              <a
+                href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69"
+                target="_blank"
+                rel="noopener noreferrer"
+                >FUSSBALL.DE</a
+              >.
+            </p>
+          </div>
+
+          <!-- FUSSBALL.DE-WIDGET: Offiziellen Einbettungscode später hier einfügen. -->
+          <div
+            id="fussball-de-widget"
+            class="widget-placeholder"
+            hidden
+            aria-label="Platzhalter für das offizielle FUSSBALL.DE-Widget"
+          ></div>
+        </div>
+      </section>
+
+      <section id="ergebnisse" class="section" aria-labelledby="results-title">
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Rückblick</p>
+              <h2 id="results-title">Letzte Spiele</h2>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Vollständiger Spielplan</a
+            >
+          </div>
+
+          <div id="recent-matches" class="results-list">
+            <p class="fallback-notice">
+              Ergebnisse werden mit JavaScript angezeigt. Den vollständigen
+              Spielplan finden Sie auf
+              <a
+                href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69"
+                target="_blank"
+                rel="noopener noreferrer"
+                >FUSSBALL.DE</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="highlights"
+        class="highlights-section"
+        aria-labelledby="highlights-title"
+      >
+        <div class="highlights-intro">
+          <div class="container highlights-intro-grid">
+            <div>
+              <h2 id="highlights-title">Highlight aus dem letzten Spiel</h2>
+            </div>
+            <div class="highlights-intro-copy">
+              <p>
+                Die neuesten Bilder vom Platz – direkt vom offiziellen
+                YouTube-Kanal des TSV Wittenau.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.youtube.com/@TSVWittenaufussball"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube-Kanal öffnen<span class="visually-hidden">
+                  (öffnet in neuem Tab)</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-feature" aria-labelledby="video-title">
+          <div class="container">
+            <div class="highlight-video">
+              <iframe
+                data-youtube-video="fsUrPh3jStQ"
+                title="Internationale gegen TSV Wittenau auf YouTube"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <div class="highlight-details">
+              <div>
+                <p class="eyebrow">Aktuellstes Video</p>
+                <h3 id="video-title">Internationale vs. TSV Wittenau</h3>
+              </div>
+              <a
+                class="button button-dark"
+                href="https://www.youtube.com/watch?v=fsUrPh3jStQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Auf YouTube ansehen<span class="visually-hidden">
+                  (öffnet in neuem Tab)</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="geschichte"
+        class="story-section"
+        aria-labelledby="story-title"
+      >
+        <div
+          class="story-image"
+          role="img"
+          aria-label="Platzhalter: Die Herrenmannschaft des TSV Wittenau auf dem Fußballplatz"
+        ></div>
+        <div class="story-copy">
+          <p class="eyebrow">Unser Weg</p>
+          <h2 id="story-title">Kleines Feld.<br />Große Pläne.</h2>
+          <p>
+            Was als 7er-Herrenmannschaft begann, wächst weiter. Seit der Saison
+            2026/27 tritt der TSV Berlin-Wittenau als 11er-Mannschaft an. Der
+            nächste Schritt einer Mannschaft, die gemeinsam mehr erreichen will.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="mannschaft"
+        class="section team-section"
+        aria-labelledby="team-title"
+      >
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Saison 2026/27</p>
+              <h2 id="team-title">Unsere Mannschaft</h2>
+            </div>
+          </div>
+
+          <div id="players-grid" class="players-grid">
+            <p class="fallback-notice">
+              Der Mannschaftskader wird mit JavaScript angezeigt. Die Kaderdaten
+              sind derzeit als Beispielinhalte angelegt.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="sponsoren"
+        class="section sponsor-section"
+        aria-labelledby="sponsor-title"
+      >
+        <div class="container sponsor-layout">
+          <div class="sponsor-copy">
+            <p class="eyebrow light">Partnerschaft</p>
+            <h2 id="sponsor-title">Gemeinsam für Wittenau</h2>
+            <p>
+              Unterstützen Sie unsere Mannschaft und werden Sie Teil unseres
+              nächsten Kapitels.
+            </p>
+            <div class="button-group">
+              <a
+                class="button button-light"
+                href="mailto:sponsoring@tsv-wittenau.de?subject=Sponsoring%20Herrenmannschaft"
+                >Sponsor werden</a
+              >
+              <a class="button button-outline-light" href="#kontakt"
+                >Kontakt aufnehmen</a
+              >
+            </div>
+          </div>
+          <ul class="benefits-list">
+            <li>
+              <span aria-hidden="true">01</span>Sichtbarkeit im lokalen Umfeld
+            </li>
+            <li>
+              <span aria-hidden="true">02</span>Präsenz bei Heimspielen und
+              digitalen Kanälen
+            </li>
+            <li>
+              <span aria-hidden="true">03</span>Unterstützung des
+              Amateurfußballs in Berlin
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer id="kontakt" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a
+            class="brand footer-brand"
+            href="#start"
+            aria-label="TSV Wittenau – nach oben"
+          >
+            <span class="brand-mark" aria-hidden="true">
+              <img
+                src="assets/tsv-wittenau-logo.png"
+                alt=""
+                width="2480"
+                height="2480"
+              />
+            </span>
+            <span>TSV Wittenau</span>
+          </a>
+          <p>Herrenfußball aus Berlin-Reinickendorf.</p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Spielstätte</h2>
+          <address>
+            Scharnweberstraße KR1<br />Uranusweg 34<br />13405 Berlin
+          </address>
+        </div>
+        <div>
+          <h2 class="footer-heading">Kontakt</h2>
+          <a href="mailto:herren@tsv-wittenau.de">herren@tsv-wittenau.de</a>
+          <a
+            href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69"
+            target="_blank"
+            rel="noopener noreferrer"
+            >TSV Wittenau auf FUSSBALL.DE<span class="visually-hidden">
+              (öffnet in neuem Tab)</span
+            ></a
+          >
+        </div>
+        <nav aria-label="Rechtliches">
+          <h2 class="footer-heading">Rechtliches</h2>
+          <a
+            id="impressum"
+            href="mailto:vorstand@tsv-wittenau.de?subject=Impressum"
+            >Impressum</a
+          >
+          <a
+            id="datenschutz"
+            href="mailto:vorstand@tsv-wittenau.de?subject=Datenschutz"
+            >Datenschutz</a
+          >
+        </nav>
       </div>
-      <div>
-        <h2 class="footer-heading">Kontakt</h2>
-        <a href="mailto:herren@tsv-wittenau.de">herren@tsv-wittenau.de</a>
-        <a href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69" target="_blank" rel="noopener noreferrer">TSV Wittenau auf FUSSBALL.DE<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+      <div class="container footer-bottom">
+        <p>
+          © <span id="current-year">2026</span> TSV Wittenau. Alle Rechte
+          vorbehalten.
+        </p>
+        <a class="back-to-top" href="#start"
+          >Nach oben <span aria-hidden="true">↑</span></a
+        >
       </div>
-      <nav aria-label="Rechtliches">
-        <h2 class="footer-heading">Rechtliches</h2>
-        <a id="impressum" href="mailto:vorstand@tsv-wittenau.de?subject=Impressum">Impressum</a>
-        <a id="datenschutz" href="mailto:vorstand@tsv-wittenau.de?subject=Datenschutz">Datenschutz</a>
-      </nav>
-    </div>
-    <div class="container footer-bottom">
-      <p>© <span id="current-year">2026</span> TSV Wittenau. Alle Rechte vorbehalten.</p>
-      <a class="back-to-top" href="#start">Nach oben <span aria-hidden="true">↑</span></a>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
