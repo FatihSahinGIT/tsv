@@ -287,6 +287,28 @@ function setupSmoothScrolling() {
   });
 }
 
+/** Kleine Einstiegsanimation nur für die Hauptheadline. */
+function setupHeadlineAnimation() {
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  const headline = document.querySelector(".hero h1");
+
+  if (reduceMotion || !headline || typeof window.gsap === "undefined") return;
+
+  window.gsap.fromTo(
+    headline,
+    { autoAlpha: 0, y: 10 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.62,
+      ease: "power2.out",
+      clearProps: "transform,opacity,visibility",
+    },
+  );
+}
+
 /**
  * Kleine, einmalige Einblendungen beim Scrollen.
  * Ohne GSAP oder bei reduzierter Bewegung bleiben alle Inhalte sofort sichtbar.
@@ -383,6 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderNextMatch();
   renderRecentMatches();
   renderPlayers();
+  setupHeadlineAnimation();
 
   const year = document.querySelector("#current-year");
   if (year) year.textContent = String(new Date().getFullYear());
