@@ -936,6 +936,18 @@ h3 {
   border: 0;
   background: transparent;
 }
+.external-content-placeholder.is-loaded > * {
+  max-width: none;
+}
+.external-content-video.is-loaded {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 16 / 9;
+}
+.external-content-video.is-loaded > iframe {
+  width: 100%;
+  max-width: none;
+}
 .external-content-placeholder.is-loaded > .fussballde_widget,
 .fussballde_widget,
 .fussballde_widget > div,
