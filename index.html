@@ -13,6 +13,10 @@
     <script src="assets/vendor/lenis.min.js" defer></script>
     <script src="assets/vendor/gsap.min.js" defer></script>
     <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://www.fussball.de/widgets.js"
+    ></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -94,25 +98,11 @@
             >
           </div>
 
-          <div id="next-match-content" class="match-content" aria-live="polite">
-            <p class="fallback-notice">
-              Die aktuellen Spieldaten werden geladen. Bei deaktiviertem
-              JavaScript finden Sie den Spielplan direkt auf
-              <a
-                href="https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69"
-                target="_blank"
-                rel="noopener noreferrer"
-                >FUSSBALL.DE</a
-              >.
-            </p>
-          </div>
-
-          <!-- FUSSBALL.DE-WIDGET: Offiziellen Einbettungscode später hier einfügen. -->
           <div
-            id="fussball-de-widget"
-            class="widget-placeholder"
-            hidden
-            aria-label="Platzhalter für das offizielle FUSSBALL.DE-Widget"
+            class="fussballde_widget"
+            data-id="5361811a-8394-4b99-913d-4c21adbe7fcd"
+            data-type="next-match"
+            style="width: 100%"
           ></div>
         </div>
       </section>

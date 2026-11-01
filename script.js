@@ -5,36 +5,6 @@
    Alle Inhalte in diesem Block können später einfach ersetzt werden.
    ================================================================ */
 
-// Datenstand: 08.10.2026
-// Quelle: offizielle Mannschaftsseite auf FUSSBALL.DE (Saison 2026/27)
-const teamPageUrl =
-  "https://www.fussball.de/mannschaft/tsv-berlin-wittenau-tsv-wittenau-berlin/-/saison/2627/team-id/03198303VC000000VS5489BSVU0ORN69";
-
-const nextMatch = {
-  competition: "Herren Kreisliga C · Staffel 3",
-  date: "2026-10-11",
-  dateLabel: "Sonntag, 11. Oktober 2026",
-  time: "10:00",
-  homeTeam: {
-    name: "SC Union 06 III",
-    shortName: "SCU",
-  },
-  awayTeam: {
-    name: "TSV Berlin-Wittenau",
-    shortName: "TSV",
-  },
-  type: "Auswärtsspiel",
-  venue: {
-    name: "Poststadion KR4 (Jana-Lange-Platz)",
-    street: "Lehrter Straße 59",
-    city: "10557 Berlin",
-    mapUrl:
-      "https://www.openstreetmap.org/search?query=Lehrter%20Stra%C3%9Fe%2059%2C%2010557%20Berlin",
-  },
-  detailsUrl:
-    "https://www.fussball.de/spiel/sc-union-06-iii-tsv-berlin-wittenau/-/spiel/031G0G11GS000000VS5489BTVVG7L386",
-};
-
 const recentMatches = [
   {
     date: "2026-09-27",
@@ -134,42 +104,6 @@ const escapeHtml = (value) =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
-
-function renderNextMatch() {
-  const target = document.querySelector("#next-match-content");
-  if (!target) return;
-
-  const match = nextMatch;
-  target.innerHTML = `
-    <article class="match-facts" aria-label="${escapeHtml(match.homeTeam.name)} gegen ${escapeHtml(match.awayTeam.name)}">
-      <div class="match-fact">
-        <p class="match-label">Uhrzeit</p>
-        <div class="match-value">
-          <p><time datetime="${escapeHtml(match.date)}">${escapeHtml(match.dateLabel)}</time></p>
-          <p><time datetime="${escapeHtml(match.date)}T${escapeHtml(match.time)}">${escapeHtml(match.time)} Uhr</time></p>
-        </div>
-      </div>
-      <div class="match-fact">
-        <p class="match-label">Begegnung</p>
-        <div class="match-value match-teams-editorial">
-          <p>${escapeHtml(match.homeTeam.name)}</p>
-          <p class="match-secondary">gegen</p>
-          <p>${escapeHtml(match.awayTeam.name)}</p>
-        </div>
-      </div>
-      <div class="match-fact">
-        <p class="match-label">Spielort</p>
-        <div class="match-value">
-          <p>${escapeHtml(match.venue.name)}</p>
-          <address>${escapeHtml(match.venue.street)}<br>${escapeHtml(match.venue.city)}</address>
-          <div class="match-links">
-            <a href="${escapeHtml(match.venue.mapUrl)}" target="_blank" rel="noopener noreferrer">Route öffnen<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
-            <a href="${escapeHtml(match.detailsUrl)}" target="_blank" rel="noopener noreferrer">Spieldetails<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
-          </div>
-        </div>
-      </div>
-    </article>`;
-}
 
 function renderRecentMatches() {
   const target = document.querySelector("#recent-matches");
@@ -402,7 +336,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const lenis = setupSmoothScrolling();
   setupNavigation();
   setupYouTubeEmbed();
-  renderNextMatch();
   renderRecentMatches();
   renderPlayers();
   setupHeadlineAnimation();
