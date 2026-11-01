@@ -85,7 +85,15 @@
     script.src = "https://www.fussball.de/widgets.js";
     script.async = true;
     script.dataset.fussballdeWidgets = "true";
-    document.head.appendChild(script);
+    script.addEventListener("load", () => {
+      requestAnimationFrame(() => window.dispatchEvent(new Event("resize")));
+    });
+
+    // Das Widget liest beim Start die aktuelle Containerbreite aus. Zwei
+    // Layout-Frames verhindern, dass dabei die schmale Standardbreite greift.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => document.head.appendChild(script));
+    });
   };
 
   const loadYouTubeVideo = () => {

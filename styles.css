@@ -928,10 +928,23 @@ h3 {
 }
 .external-content-placeholder.is-loaded {
   display: block;
+  width: 100%;
   min-height: 0;
+  min-width: 0;
+  max-width: none;
   padding: 0;
   border: 0;
   background: transparent;
+}
+.external-content-placeholder.is-loaded > .fussballde_widget,
+.fussballde_widget,
+.fussballde_widget > div,
+.fussballde_widget > iframe,
+.fussballde_widget iframe {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  box-sizing: border-box;
 }
 .footer-link-button {
   display: block;
