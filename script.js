@@ -1,57 +1,6 @@
 "use strict";
 
-/* ================================================================
-   TSV Wittenau Herren – zentral gepflegte Beispieldaten
-   Alle Inhalte in diesem Block können später einfach ersetzt werden.
-   ================================================================ */
-
-const recentMatches = [
-  {
-    date: "2026-09-27",
-    dateLabel: "27.09.2026",
-    competition: "Kreisliga C",
-    homeTeam: "SC Westend 01 II",
-    awayTeam: "TSV Berlin-Wittenau",
-    score: "3 : 2",
-    outcome: "Niederlage",
-  },
-  {
-    date: "2026-09-13",
-    dateLabel: "13.09.2026",
-    competition: "Kreisliga C",
-    homeTeam: "FC Internationale Berlin IV",
-    awayTeam: "TSV Berlin-Wittenau",
-    score: "3 : 6",
-    outcome: "Sieg",
-  },
-  {
-    date: "2026-08-30",
-    dateLabel: "30.08.2026",
-    competition: "Kreisliga C",
-    homeTeam: "TSV Berlin-Wittenau",
-    awayTeam: "Steglitz GB",
-    score: "6 : 2",
-    outcome: "Sieg",
-  },
-  {
-    date: "2026-08-18",
-    dateLabel: "18.08.2026",
-    competition: "Berlin-Pokal",
-    homeTeam: "Cono Sur Berlin",
-    awayTeam: "TSV Berlin-Wittenau",
-    score: "1 : 0",
-    outcome: "Niederlage",
-  },
-  {
-    date: "2026-08-16",
-    dateLabel: "16.08.2026",
-    competition: "Kreisliga C",
-    homeTeam: "Lichtenrader BC III",
-    awayTeam: "TSV Berlin-Wittenau",
-    score: "1 : 6",
-    outcome: "Sieg",
-  },
-];
+/* Zentral gepflegte Kaderdaten. */
 
 const players = [
   { name: "Hendrik Pieterse", number: 1, photo: "" },
@@ -104,38 +53,6 @@ const escapeHtml = (value) =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
-
-function renderRecentMatches() {
-  const target = document.querySelector("#recent-matches");
-  if (!target) return;
-
-  target.innerHTML = recentMatches
-    .map((match) => {
-      const outcomeClass =
-        {
-          Sieg: "outcome-win",
-          Unentschieden: "outcome-draw",
-          Niederlage: "outcome-loss",
-        }[match.outcome] || "";
-
-      return `
-      <article class="result-row">
-        <div class="result-meta">
-          <time datetime="${escapeHtml(match.date)}">${escapeHtml(match.dateLabel)}</time>
-          <span>${escapeHtml(match.competition)}</span>
-        </div>
-        <div class="result-fixture">
-          <div class="result-teams">
-            <span>${escapeHtml(match.homeTeam)}</span>
-            <span>${escapeHtml(match.awayTeam)}</span>
-          </div>
-          <strong class="score" aria-label="Ergebnis ${escapeHtml(match.score.replace(":", "zu"))}">${escapeHtml(match.score)}</strong>
-        </div>
-        <span class="outcome ${outcomeClass}">${escapeHtml(match.outcome)}</span>
-      </article>`;
-    })
-    .join("");
-}
 
 function renderPlayers() {
   const target = document.querySelector("#players-grid");
@@ -267,7 +184,7 @@ function setupScrollAnimations(lenis) {
       ".next-match-layout",
       ".table-widget-layout",
       "#ergebnisse .section-heading",
-      "#ergebnisse .results-list",
+      "#ergebnisse .football-widget-shell",
       ".highlights-intro-grid",
       ".highlight-video",
       ".highlight-details",
@@ -337,7 +254,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const lenis = setupSmoothScrolling();
   setupNavigation();
   setupYouTubeEmbed();
-  renderRecentMatches();
   renderPlayers();
   setupHeadlineAnimation();
 
