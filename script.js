@@ -265,6 +265,7 @@ function setupScrollAnimations(lenis) {
   const revealTargets = window.gsap.utils.toArray(
     [
       ".next-match-layout",
+      ".table-widget-layout",
       "#ergebnisse .section-heading",
       "#ergebnisse .results-list",
       ".highlights-intro-grid",

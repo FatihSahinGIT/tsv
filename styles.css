@@ -487,6 +487,32 @@ h3 {
   gap: var(--space-4);
 }
 
+/* FUSSBALL.DE widgets */
+.table-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.table-widget-layout {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.football-widget-shell {
+  min-width: 0;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+}
+
+.football-widget,
+.football-widget iframe {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+}
+
 .section-heading-light {
   margin-bottom: 0;
   color: var(--black);
