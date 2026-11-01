@@ -224,36 +224,12 @@ function setupScrollAnimations(lenis) {
   window.ScrollTrigger.refresh();
 }
 
-/**
- * Identifiziert den eingebetteten YouTube-Player mit der aktuellen Seiten-Origin.
- * Das verhindert Player-Fehler 153 in Browsern, die den HTTP-Referrer begrenzen.
- */
-function setupYouTubeEmbed() {
-  const player = document.querySelector("[data-youtube-video]");
-  if (!player) return;
-
-  const videoId = player.dataset.youtubeVideo;
-  const isWebOrigin = ["http:", "https:"].includes(window.location.protocol);
-  const pageOrigin = isWebOrigin
-    ? window.location.origin
-    : "http://127.0.0.1:4173";
-  const parameters = new URLSearchParams({
-    origin: pageOrigin,
-    rel: "0",
-  });
-
-  if (isWebOrigin) parameters.set("widget_referrer", window.location.href);
-
-  player.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?${parameters.toString()}`;
-}
-
 document.documentElement.classList.remove("no-js");
 document.documentElement.classList.add("js");
 
 document.addEventListener("DOMContentLoaded", () => {
   const lenis = setupSmoothScrolling();
   setupNavigation();
-  setupYouTubeEmbed();
   renderPlayers();
   setupHeadlineAnimation();
 
