@@ -297,14 +297,14 @@ h3 {
 
 .hero-image {
   position: relative;
-  min-height: clamp(24rem, 67vw, 52rem);
+  min-height: clamp(21rem, 41vw, 50rem);
   overflow: hidden;
   border-radius: var(--radius-md);
   background-color: #d4d4cf;
-  background-image: url("assets/team-hero.jpg");
+  background-image: url("assets/tsv-wittenau-hero-v3.jpg");
   background-position: center;
   background-size: cover;
-  filter: grayscale(1);
+  filter: saturate(0.88) contrast(1.03);
 }
 
 .hero-image-caption {
@@ -1335,4 +1335,9 @@ h3 {
   .consent-option {
     border: 1px solid CanvasText;
   }
+}
+
+.fussballde_widget [class*="WidgetLayout_container__"] {
+  width: 100% !important;
+  max-width: none !important;
 }
